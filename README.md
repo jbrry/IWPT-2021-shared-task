@@ -54,7 +54,7 @@ pip install trankit==1.0.1
 To train a trankit model, see `scripts/trankit.py`
 
 ### Citation
-If you use this code for your research, please cite these works as:  
+If you use this code for your research, please cite our paper as:  
 ```
 @misc{barry2021dcuepfl,
     title={The DCU-EPFL Enhanced Dependency Parser at the IWPT 2021 Shared Task},
