@@ -18,6 +18,9 @@ nlp = stanza.Pipeline(lang, use_gpu=True, processors='tokenize, lemma, pos, depp
 
 doc = nlp(raw_text)
 
+dummy_edep = "0:root"
+
+
 with open(output, 'w') as outfile:
     for i, sentence in enumerate(doc.sentences):
         for token in sentence.tokens:
@@ -28,7 +31,9 @@ with open(output, 'w') as outfile:
                         line = line + f'\t{word[key]}'
                     except KeyError:
                         line = line + f'\t_'
-                line = line + "\t_\t_\n"
+
+                # deps and misc
+                line = line + f"\t{dummy_edep}\t_\n"
                 outfile.write(line)
         outfile.write("\n")
         if (i > 0) and (i % 1000) == 0:
