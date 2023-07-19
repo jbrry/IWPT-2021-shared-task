@@ -370,6 +370,10 @@ class UniversalDependenciesEnhancedDatasetReader(DatasetReader):
             fields["predicted_head_indices"] = SequenceLabelField(
                 predicted_head_indices, text_field, label_namespace="predicted_head_index_tags"
             )
+        else:
+            predicted_head_tags = None
+            predicted_head_indices = None
+
 
         fields["metadata"] = MetadataField({
             "words": words,
