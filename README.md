@@ -29,7 +29,7 @@ pip install allennlp-models
 ###  Run a model
 For running a single-task model:
 ```
-./scripts/train_eud_parser.sh fr_sequoia enhanced transformer bert-base-multilingual-cased enhanced_kg_parser
+./scripts/train_eud_parser.sh fr_sequoia enhanced transformer bert-base-multilingual-cased enhanced_kg_parser transformer no_delex
 ```
 
 For using the multitask components:
